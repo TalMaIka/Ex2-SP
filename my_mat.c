@@ -41,10 +41,10 @@ void makematrix(){
 void BCase(int b,int c){
     makematrix();
     if(a[b][c]==99 || a[b][c]==0){
-        printf("False \n");
+        printf("\n False");
     } 
     else{
-    printf("True \n");
+    printf("\n True");
     }
     }
 void CCase(int x , int y){
