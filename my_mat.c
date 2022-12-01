@@ -41,23 +41,23 @@ void makematrix(){
 void BCase(int b,int c){
     makematrix();
     if(a[b][c]==99 || a[b][c]==0){
-        printf("\n False");
+        printf("False\n");
     } 
     else{
-    printf("\n True");
+    printf("True\n");
     }
     }
 void CCase(int x , int y){
     makematrix();
-        int *ptr = a;
+        int *ptr = *a;
             for (int i = 0; i <(10*x)+y; i++)
             {
                 ptr++;
             }
             if(*ptr == 99 || *ptr == 0){
-            printf("%d \n" ,-1);
+            printf("%d\n" ,-1);
         }
         else{
-            printf("%d \n" ,*ptr);
+            printf("%d\n" ,*ptr);
         }
 }
