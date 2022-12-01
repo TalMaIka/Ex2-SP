@@ -2,10 +2,10 @@ CC=gcc
 FLAGS= -Wall -g
 FLAGSD = -Wall -fPIC
 
-all: main 
+all: connections 
 
-main:  main.o libmy_mat.a
-	${CC} ${FLAGS} main.c -L. libmy_mat.a -o main
+connections:  main.o libmy_mat.a
+	${CC} ${FLAGS} main.c -L. libmy_mat.a -o connections
 
 main.o: main.c my_mat.h
 	${CC} ${FLAGS} -c main.c

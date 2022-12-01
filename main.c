@@ -31,7 +31,6 @@ while (flag){
             flag = 0;
             break;
     }
-
     }
     return 0;
 }
