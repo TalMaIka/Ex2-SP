@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "my_mat.h"
 
-int main(){
+int main(){   
 int flag = 1;
 while (flag){
     char c ;
@@ -12,18 +12,21 @@ while (flag){
             break;
 
         case 'B':
-            BCase();
+            int x1 ;
+            scanf("%d",&x1);
+            int y1 ;
+            scanf("%d",&y1);
+            BCase(x1,y1);
             break;
         
         case 'C':
-           /* int d;
-            scanf("%d",&d);
-            int e;
-            scanf("%d",&e);
-            BCase(d,e);
-            */break;
+            int x ;
+            scanf("%d",&x);
+            int y ;
+            scanf("%d",&y);
+            CCase(x,y);
+            break;
             
-
         case 'D':
             flag = 0;
             break;

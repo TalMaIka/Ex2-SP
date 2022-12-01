@@ -1,7 +1,7 @@
 #include "my_mat.h"
 #include <stdio.h>
 
-int min(int *a, int *b){
+int min(int a, int b){
     if(a<b)
         return a;
     else
@@ -15,11 +15,11 @@ void ACase(){
         }
     }
 }
-void BCase(int x , int y){
-   for (int i = 0; i < TEN; i++) {
+void makematrix(){
+        for (int i = 0; i < TEN; i++) {
             for (int j = 0; j < TEN; j++) {
                 if(a[i][j]==0 && i!=j){
-                    a[i][j] = 10000;
+                    a[i][j] = 99; 
                 }
             }
 
@@ -30,19 +30,34 @@ void BCase(int x , int y){
             {
                 for (int j = 0; j <TEN; j++)
                 {
-                        a[i][j] = min(a[i][j], a[i][k] + a[k][j]);
+                   a[i][j] = min(a[i][j], a[i][k] + a[k][j]);
 
                 }
 
             }
 
         }
-    if(a[x][y]!=0){
-        printf("true");
-    }
-    else{
-        printf("false");
-    }
 }
-
-
+void BCase(int b,int c){
+    makematrix();
+    if(a[b][c]==99 || a[b][c]==0){
+        printf("False \n");
+    } 
+    else{
+    printf("True \n");
+    }
+    }
+void CCase(int x , int y){
+    makematrix();
+        int *ptr = a;
+            for (int i = 0; i <(10*x)+y; i++)
+            {
+                ptr++;
+            }
+            if(*ptr == 99 || *ptr == 0){
+            printf("%d \n" ,-1);
+        }
+        else{
+            printf("%d \n" ,*ptr);
+        }
+}
