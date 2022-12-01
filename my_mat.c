@@ -19,7 +19,7 @@ void makematrix(){
         for (int i = 0; i < TEN; i++) {
             for (int j = 0; j < TEN; j++) {
                 if(a[i][j]==0 && i!=j){
-                    a[i][j] = 99; 
+                    a[i][j] = INF; 
                 }
             }
 
@@ -40,7 +40,7 @@ void makematrix(){
 }
 void BCase(int b,int c){
     makematrix();
-    if(a[b][c]==99 || a[b][c]==0){
+    if(a[b][c]==INF || a[b][c]==0){
         printf("False\n");
     } 
     else{
@@ -54,7 +54,7 @@ void CCase(int x , int y){
             {
                 ptr++;
             }
-            if(*ptr == 99 || *ptr == 0){
+            if(*ptr == INF || *ptr == 0){
             printf("%d\n" ,-1);
         }
         else{
