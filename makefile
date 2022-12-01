@@ -18,3 +18,6 @@ libmy_mat.a : my_mat.o
 
 clean:
 	rm -f *.o *.a main
+
+.PHONY :
+	clean all
