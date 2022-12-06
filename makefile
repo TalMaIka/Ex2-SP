@@ -20,4 +20,4 @@ clean:
 	rm -f *.o *.a connections
 
 .PHONY :
-	clean all
+	clean all 

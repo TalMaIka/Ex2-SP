@@ -12,19 +12,6 @@ int min(int a, int b)
 // 2D global array decleration.
 int a[TEN][TEN];
 
-// When the input is 'A'
-// Initialization of the 2d array. // O(n^2)
-void ACase()
-{
-    for (int i = 0; i < TEN; i++)
-    {
-        for (int j = 0; j < TEN; j++)
-        {
-            scanf("%d", &a[i][j]);
-        }
-    }
-}
-
 // Side func -> BCase / CCase // O(n^2 + n^3) ~ O(n^3)
 void makematrix()
 {
@@ -53,11 +40,24 @@ void makematrix()
     }
 }
 
+// When the input is 'A'
+// Initialization of the 2d array. // O(n^2)
+void ACase()
+{
+    for (int i = 0; i < TEN; i++)
+    {
+        for (int j = 0; j < TEN; j++)
+        {
+            scanf("%d", &a[i][j]);
+        }
+    }
+    makematrix();
+}
+
 // When the input is 'B'
 // Uses the matrix that 'CCase' uses to identify of there is a path between i,j. // O(n^2) > makematrix()
 void BCase(int b, int c)
 {
-    makematrix();
     if (a[b][c] == INF || a[b][c] == 0)
     {
         printf("False\n");
@@ -72,7 +72,6 @@ void BCase(int b, int c)
 // returns the shortest path if there is, between i,j trough the matrixes Floyd-Warshall algorithm generates. // O
 void CCase(int x, int y)
 {
-    makematrix();
     int *ptr = *a;
     for (int i = 0; i < (10 * x) + y; i++)
     {
